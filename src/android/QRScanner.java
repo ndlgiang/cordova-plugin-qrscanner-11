@@ -613,6 +613,8 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
         if(this.nextScanCallback != null)
             this.nextScanCallback.error(QRScannerError.SCAN_CANCELED);
         this.nextScanCallback = null;
+
+        getStatus(callbackContext);
     }
 
     private void show(final CallbackContext callbackContext) {
